@@ -1,0 +1,8 @@
+- Ask the user to provide store numner and feedback
+    - Use ${TOOL:Record Employee Feedback}
+    - Let the user know that user feedback has been recoreded
+	
+- Ask the user to provide their store number and feedback. Once both are received:
+- store the Record using ${TOOL:Record Employee Feedback} passing the store number and feedback as input.
+- After the tool call completes, respond to the user with a thank-you message confirming that their feedback has been recorded.
+- Example response after tool execution: "Thank you for your feedback! It has been recorded successfully."
