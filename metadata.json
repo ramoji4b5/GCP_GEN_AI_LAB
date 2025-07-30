@@ -1,0 +1,37 @@
+{"id":"doc-1","jsonData":"{\"title\":\"Heaven Resort\",\"category\":\"information\",\"rating\":4.8}","content":{"mimeType":"application/pdf","uri":"gs://qwiklabs-gcp-02-64ad84f46f70/hotel1.pdf"}}
+{"id":"doc-2","jsonData":"{\"title\":\"Paradise Reef Resort\",\"category\":\"information\",\"rating\":4.7}","content":{"mimeType":"application/pdf","uri":"gs://qwiklabs-gcp-02-64ad84f46f70/hotel2.pdf"}}
+{"id":"doc-3","jsonData":"{\"title\":\"AquaPulse Maldives\",\"category\":\"information\",\"rating\":4.0}","content":{"mimeType":"application/pdf","uri":"gs://qwiklabs-gcp-02-64ad84f46f70/hotel3.pdf"}}
+{"id":"doc-4","jsonData":"{\"title\":\"Heaven Resort Financials\",\"category\":\"financials\",\"rating\":4.8}","content":{"mimeType":"application/pdf","uri":"gs://qwiklabs-gcp-02-64ad84f46f70/hotel1-financials.pdf"}}
+{"id":"doc-5","jsonData":"{\"title\":\"Paradise Reef Resort Financials\",\"category\":\"financials\",\"rating\":4.7}","content":{"mimeType":"application/pdf","uri":"gs://qwiklabs-gcp-02-64ad84f46f70/hotel2-financials.pdf"}}
+{"id":"doc-6","jsonData":"{\"title\":\"AquaPulse Maldives Financials\",\"category\":\"financials\",\"rating\":4.0}","content":{"mimeType":"application/pdf","uri":"gs://qwiklabs-gcp-02-64ad84f46f70/hotel3-financials.pdf"}}
+
+
+
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+-H "Content-Type: application/json" \
+"https://discoveryengine.googleapis.com/v1alpha/projects/564809440454/locations/global/collections/default_collection/engines/cymbal-hotels_1752736733236/servingConfigs/default_search:search" \
+-d '{"query":"What hotels are available in the Maldives?","pageSize":10,"queryExpansionSpec":{"condition":"AUTO"},"spellCorrectionSpec":{"mode":"AUTO"},"relevanceScoreSpec":{"returnRelevanceScore":true},"languageCode":"en-US","facetSpecs":[{"facetKey":{"key":"category"},"limit":30}],"naturalLanguageQueryUnderstandingSpec":{"filterExtractionCondition":"ENABLED"},"userInfo":{"timeZone":"Asia/Calcutta"},"filter":"category: ANY(\"information\")"}'
+
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" "https://discoveryengine.googleapis.com/v1alpha/projects/564809440454/locations/global/collections/default_collection/engines/cymbal-hotels_1752736733236/servingConfigs/default_search:search" -d '{"query":"What hotels are available in the Maldives?","pageSize":10,"queryExpansionSpec":{"condition":"AUTO"},"spellCorrectionSpec":{"mode":"AUTO"},"relevanceScoreSpec":{"returnRelevanceScore":true},"languageCode":"en-US","facetSpecs":[{"facetKey":{"key":"category"},"limit":30}],"naturalLanguageQueryUnderstandingSpec":{"filterExtractionCondition":"ENABLED"},"userInfo":{"timeZone":"Asia/Calcutta"},"filter":"category: ANY(\"information\")"}
+
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" "https://discoveryengine.googleapis.com/v1alpha/projects/564809440454/locations/global/collections/default_collection/engines/cymbal-hotels_1752736733236/servingConfigs/default_search:search" -d '{"query":"What hotels are available in the Maldives?","pageSize":10,"queryExpansionSpec":{"condition":"AUTO"},"spellCorrectionSpec":{"mode":"AUTO"},"relevanceScoreSpec":{"returnRelevanceScore":true},"languageCode":"en-US","facetSpecs":[{"facetKey":{"key":"category"},"limit":30}],"naturalLanguageQueryUnderstandingSpec":{"filterExtractionCondition":"ENABLED"},"userInfo":{"timeZone":"Asia/Calcutta"},"filter":"category: ANY(\"information\")"}'
+
+
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" "https://discoveryengine.googleapis.com/v1alpha/projects/564809440454/locations/global/collections/default_collection/engines/cymbal-hotels_1752736733236/servingConfigs/default_search:search" -d '{"query":"What hotels are available in the Maldives?","pageSize":10,"queryExpansionSpec":{"condition":"AUTO"},"spellCorrectionSpec":{"mode":"AUTO"},"relevanceScoreSpec":{"returnRelevanceScore":true},"languageCode":"en-US","facetSpecs":[{"facetKey":{"key":"category"},"limit":30}],"naturalLanguageQueryUnderstandingSpec":{"filterExtractionCondition":"ENABLED"},"userInfo":{"timeZone":"Asia/Calcutta"},"filter":"category: ANY(\"financial\")"}
+
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+-H "Content-Type: application/json" \
+"https://discoveryengine.googleapis.com/v1alpha/projects/564809440454/locations/global/collections/default_collection/engines/cymbal-hotels_1752736733236/servingConfigs/default_search:search" \
+-d '{"query":"What is the revenue for the hotels in the Maldives?","pageSize":10,"queryExpansionSpec":{"condition":"AUTO"},"spellCorrectionSpec":{"mode":"AUTO"},"relevanceScoreSpec":{"returnRelevanceScore":true},"languageCode":"en-US","facetSpecs":[{"facetKey":{"key":"category"},"limit":30}],"naturalLanguageQueryUnderstandingSpec":{"filterExtractionCondition":"ENABLED"},"userInfo":{"timeZone":"Asia/Calcutta"},"filter":"category: ANY(\"financial\")"}'
+
+
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+-H "Content-Type: application/json" \
+"https://discoveryengine.googleapis.com/v1alpha/projects/564809440454/locations/global/collections/default_collection/engines/cymbal-hotels_1752736733236/servingConfigs/default_search:search" \
+-d '{"query":"What hotels are available in the Maldives?","pageSize":2,"queryExpansionSpec":{"condition":"AUTO"},"spellCorrectionSpec":{"mode":"AUTO"},"relevanceScoreSpec":{"returnRelevanceScore":true},"languageCode":"en-US","facetSpecs":[{"facetKey":{"key":"category"},"limit":30}],"naturalLanguageQueryUnderstandingSpec":{"filterExtractionCondition":"ENABLED"},"userInfo":{"timeZone":"Asia/Calcutta"},"filter":"category: ANY(\"information\")"}'
+
+
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+-H "Content-Type: application/json" \
+"https://discoveryengine.googleapis.com/v1alpha/projects/564809440454/locations/global/collections/default_collection/engines/cymbal-hotels_1752736733236/servingConfigs/default_search:search" \
+-d '{"query":"What hotels are available in the Maldives?","pageSize":2,"queryExpansionSpec":{"condition":"AUTO"},"spellCorrectionSpec":{"mode":"AUTO"},"relevanceScoreSpec":{"returnRelevanceScore":true},"languageCode":"en-US","facetSpecs":[{"facetKey":{"key":"category"},"limit":30}],"naturalLanguageQueryUnderstandingSpec":{"filterExtractionCondition":"ENABLED"},"userInfo":{"timeZone":"Asia/Calcutta"},"filter":"category: ANY(\"information\")"}'
